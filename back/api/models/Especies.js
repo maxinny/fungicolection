@@ -15,21 +15,22 @@ module.exports = {
       temporada: {
           type: 'string',
           enum: ['invierno', 'primavera', 'verano','otoño']
-      }
+      },
       calidad:  {
         type: 'string',
         enum: ['mortal','toxica','venenosa','sin valor','mediocre','comestible con precacion','buena','muy buena','excelente']
-      }
+      },
       olor:     'string',
       sabor:    'string',
       textura:  'string',
       color:    'string',
 
       owner: {
-        model: 'user'
-      }
+        model: 'especies'
+      },
       confusiones:  {
-
+        collection: 'especies',
+        via: 'owner'
       }
   }
 };
